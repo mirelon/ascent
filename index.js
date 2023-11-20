@@ -1,10 +1,20 @@
-function update() {
-  let now = new Date()
-  let startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate())
-  let a = new Date() - startOfDay
-  let b = Math.max(a-21600000, 0)
-  let full = b / 1800000 + 36 * ((startOfDay - Date.parse('2020-05-18T00:00:00+0200')) / 86400000 - 30)
-  document.getElementsByClassName('project-name')[0].textContent = full.toFixed(4) + ' m'
+const DAY_MS = 86_400_000
+const updateElements = (className, text) => {
+  for (const element of document.getElementsByClassName(className)) {
+    element.textContent = text
+  }
 }
 
-setInterval(update, 50)
+function update() {
+  const now = new Date()
+  const olivkaBirthDate = Date.parse('2021-02-24T00:00:00+0100')
+  const sarlotkaBirthDate = Date.parse('2023-09-12T00:00:00+0200')
+  const olivkaDays = Math.floor((now - olivkaBirthDate) / DAY_MS)
+  const sarlotkaDays = Math.floor((now - sarlotkaBirthDate) / DAY_MS)
+  const olivkaAkoSarlotka = olivkaBirthDate + sarlotkaDays * DAY_MS
+  updateElements('olivka', olivkaDays)
+  updateElements('sarlotka', sarlotkaDays)
+  updateElements('olivka_ako_sarlotka', new Date(olivkaAkoSarlotka).toDateString())
+}
+
+setInterval(update, 50) // milliseconds
