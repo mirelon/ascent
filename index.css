@@ -1,0 +1,42 @@
+.links {
+    line-height: 2em;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+span.label {
+    padding: 2px;
+    margin-right: 10px;
+    border: 2px solid rgba(255,255,255,0);
+}
+span.label:hover {
+    border: 2px solid black;
+}
+.y1 {
+    background-color: rgba(255, 230, 0);
+}
+.y2 {
+    background-color: rgba(230, 255, 0);
+}
+.v1 {
+    background-color: rgba(255, 90, 230);
+}
+.v2 {
+    background-color: rgba(230, 90, 255);
+}
+.g1 {
+    background-color: rgba(0, 255, 200);
+}
+.g2 {
+    background-color: rgba(140, 255, 0);
+}
+.b1 {
+    background-color: rgba(0, 230, 255);
+}
+.b2 {
+    background-color: rgba(230, 0, 255);
+}
+details:hover {
+    cursor: pointer;
+}
