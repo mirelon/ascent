@@ -1,3 +1,5 @@
+import {updateProgressBars} from './progressBars.js'
+
 const DAY_MS = 86_400_000
 const updateElements = (className, text) => {
   for (const element of document.getElementsByClassName(className)) {
@@ -22,4 +24,6 @@ function update() {
   updateElements('olivka_ako_sarlotka', new Date(olivkaAkoSarlotka).toDateString())
 }
 
-setInterval(update, 50) // milliseconds
+setInterval(update, 50) // 50 milliseconds
+updateProgressBars()
+setInterval(updateProgressBars, 10_000) // 10 seconds

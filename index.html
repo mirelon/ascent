@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>Ascent</title>
-    <script src="index.js"></script>
-    <link href="index.css" rel="stylesheet"/>
+    <script type="module" src="js/index.js"></script>
+    <link href="css/index.css" rel="stylesheet"/>
 </head>
 <body>
 Ja: <span class="ja"></span> dní<br/>
@@ -17,7 +17,7 @@ Olivka mala <span class="sarlotka"></span> dní <span class="olivka_ako_sarlotka
         class="label b1">Gejzír
     Herľany</span></a><br/>
     <b>⛪ Omše:</b>
-    <a href="http://farnostsvinica.sk/bohosluzby/" target="_blank"><span class="label y1">Svinica<span></a>
+    <a href="http://farnostsvinica.sk/bohosluzby/" target="_blank"><span class="label y1">Svinica</span></a>
     <a href="http://rkc-kecerovce.sk/category/oznamy/" target="_blank"><span class="label y2">Kecerovce</span></a>
     <a href="https://www.farnostrozhanovce.sk/omse/" target="_blank"><span class="label y1">Rozhanovce</span></a>
     <a href="https://www.aug.sk/kostol-sv-rity/svate-omse-oznamy/" target="_blank"><span
@@ -152,6 +152,24 @@ Olivka mala <span class="sarlotka"></span> dní <span class="olivka_ako_sarlotka
     <details>
         <summary>IBAN</summary>
         SK1183605207004202593455
+    </details>
+    <details>
+        <summary>Progress Bars</summary>
+        <div style="margin-top: 10px;">
+            <h3>CAB Backend</h3>
+            <div style="margin-bottom: 10px;">
+                Staging Preprod:
+                <div class="progress-bar-wrapper">
+                    <div id="progress-cab-backend-staging-preprod" class="progress-bar-fill"></div>
+                </div>
+            </div>
+            <div>
+                Staging Mainnet:
+                <div class="progress-bar-wrapper">
+                    <div id="progress-cab-backend-staging-mainnet" class="progress-bar-fill"></div>
+                </div>
+            </div>
+        </div>
     </details>
 </div>
 </body>
