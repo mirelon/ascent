@@ -22,4 +22,5 @@ export const updateProgressBars = () =>
   Promise.all([
     updateCabBackendProgressBar('progress-cab-backend-staging-preprod', 'https://cab-server.preprod.staging.wingriders.com/healthcheck'),
     updateCabBackendProgressBar('progress-cab-backend-staging-mainnet', 'https://cab-server.mainnet.staging.wingriders.com/healthcheck'),
+    updateCabBackendProgressBar('progress-cab-backend-prod-mainnet', 'https://cab-server.mainnet.wingriders.com/healthcheck'),
   ])
