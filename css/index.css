@@ -37,6 +37,9 @@ span.label:hover {
 .b2 {
     background-color: rgba(230, 0, 255);
 }
+.o1 {
+    background-color: rgba(255, 180, 0);
+}
 details:hover {
     cursor: pointer;
 }
